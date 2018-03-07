@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Kalam|Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Katibeh" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="main.js">
+
+  </script>
+
+  <title>Hangman_Game</title>
+</head>
+<body>
+    <section id="intro">
+      <div class="container">
+        <h1 class="intro-header">Welcome to Hangman Game!</h1>
+        <h1 class="intro-header">Select the mode you want to play!</h1>
+      </div>
+
+      <div class="container-flex">
+        <div id="btn">
+          <button onclick="tutorial()" id="tutorial-btn">Learning Section</button>
+        </div>
+          <div id="btn">
+            <button onclick="singleFunction()" id="intro-single">Single Player</button>
+          </div>
+          <div id="btn">
+            <button onclick="multiFunction()" id="intro-multi">Multi  Player</button>
+          </div>
+      </div>
+      <div class="form-group nick">
+
+          <label for="Nick" id="nick">Nickname</label>
+          <input type="text" class="form-control" id="usr">
+          <button onclick="nicknameFunction()" class="btn btn-primary btn-block" id="username">Submit</button>
+
+      </div>
+      <div class="image">
+        <img src="img/s9.jpg" alt="">
+      </div>
+    </section>
+<!-- Learning Section -->
+<section id="learning" class="display-none">
+  <h1>Here are definitions of words we choose in this game</h1>
+
+  <h2 class="historia-title" onclick="showHistoria()">Definicje z kategori Historia</h2>
+  <div class="word-box display-none" id="historia-words">
+    <p class="history-description"><span>Epoka hellenistyczna </span> – okres w dziejach regionu Morza Śródziemnego i Bliskiego Wschodu (zwłaszcza obszarów znajdujących się pod greckim panowaniem), którego początek wyznacza śmierć Aleksandra Wielkiego w 323 roku p.n.e., a koniec – rzymskie podboje zakończone zajęciem ptolemejskiego Egiptu w 30 roku p.n.e.</p>
+    <p class="history-description"><span>Cesarstwo Bizantyńskie - </span> później Cesarstwo Bizantyńskie (w literaturze można też spotkać formę Cesarstwo Bizantyjskie) – termin historiograficzny używany od XIX wieku na określenie greckojęzycznego, średniowiecznego cesarstwa rzymskiego ze stolicą w Konstantynopolu. Używane zamiennie określenie Cesarstwo wschodniorzymskie jest bardziej popularne w odniesieniu do okresu poprzedzającego upadek Cesarstwa Zachodniorzymskiego</p>
+    <p class="history-description"><span>Wielka schizma wschodnia </span> – rozłam w chrześcijaństwie na Kościół wschodni i zachodni. Za symboliczną datę tego wydarzenia przyjmuje się rok 1054. Nie był to jednorazowy akt, lecz proces, który rozciągał się w szerokich ramach chronologicznych, trwający aż do XIII w. Wtedy wiele osób nie zdawało sobie sprawy z istnienia schizmy. Winą za jej powstanie obarcza się zarówno Rzym, jak i Konstantynopol.</p>
+    <p class="history-description"><span>AbsolutyzmOświecony </span>odmiana absolutyzmu - forma ustroju państwa rozpowszechniona w Europie w II połowie XVIII w., w której władca uznaje niektóre zasady umowy społecznej między sobą a społeczeństwem, przyznaje mu pewne wolności np. tolerancję religijną, jednocześnie jednak pozostając monarchą absolutnym, sprawującym władzę nad wszelkimi dziedzinami administracji państwowej. Mianuje się pierwszym sługą państwa. Z teorii tej korzystali władcy chcąc umocnić swoje rządy.</p>
+    <p class="history-description"><span>Traktat w Verdun </span> - traktat zawarty w 843 roku w Verdun, który trwale podzielił państwo Karola Wielkiego między synów Ludwika I Pobożnego (syna Karola Wielkiego): Lotara, Karola Łysego i Ludwika Niemieckiego. Podział ten położył podwaliny pod powstanie w przyszłości Francji i Niemiec.</p>
+    <p class="history-description"><span>Pokój w Budziszynie </span> -  traktat pokojowy polsko-niemiecki zawarty między Bolesławem I Chrobrym a cesarzem Henrykiem II, podpisany 30 stycznia 1018 w Budziszynie.
+Na jego mocy została zakończona wojna toczona od 1015, a jednocześnie cały cykl prowadzonych od 1002 wojen o Czechy i Łużyce. Przy Polsce pozostały niezależne od cesarza Łużyce, Milsko i Morawy, Bolesław uzyskał też posiłki zbrojne na wyprawę kijowską, mającą na celu osadzenie na tronie kijowskim zięcia Bolesława – Świętopełka I Przeklętego.</p>
+    <p class="history-description"><span>Mezopotamia </span> - Międzyrzecze, nazwa przejęta z języka perskiego Miyanrudan i aramejskiego Beth-Nahrain) to starożytna kraina na Bliskim Wschodzie leżąca w dorzeczu rzek: Tygrysu i Eufratu. Na obszarze tym w starożytności rozwijał się szereg kultur, państw i imperiów, których twórcami były różne ludy (Sumerowie, Akadyjczycy, Asyryjczycy, Amoryci, Huryci, Kasyci, Chaldejczycy), kontynuujące jednak wspólne dziedzictwo kulturowe. Powszechnie uważa się, że właśnie na terenach Mezopotamii narodziła się pierwsza cywilizacja.</p>
+    <p class="history-description"><span>Unia brzeska </span> - połączenie Cerkwi prawosławnej z Kościołem łacińskim w Rzeczypospolitej Obojga Narodów, dokonane w Brześciu Litewskim w 1596 roku. Część duchownych prawosławnych i wyznawców prawosławia uznała papieża za głowę Kościoła i przyjęła dogmaty katolickie, zachowując bizantyjski ryt liturgiczny. Następstwem unii brzeskiej był podział społeczności prawosławnej na zwolenników unii – unitów i przeciwników – dyzunitów.</p>
+    <p class="history-description"><span>Powstanie Warszawskie </span> - (1 sierpnia – 3 października 1944) – wystąpienie zbrojne przeciwko okupującym Warszawę wojskom niemieckim, zorganizowane przez Armię Krajową w ramach akcji „Burza”, połączone z ujawnieniem się i oficjalną działalnością najwyższych struktur Polskiego Państwa Podziemnego. Swoim maksymalnym zasięgiem objęło część lewobrzeżnych dzielnic miasta, niewielki obszar prawobrzeżnej Warszawy oraz Puszczę Kampinoską i Legionowo..</p>
+    <p class="history-description"><span>Cezaropapizm </span> - tendencja nazywana też cezaryzmem, prowadząca do zwierzchności państwa nad Kościołem i decydowaniu o całokształcie życia religijnego, w tym także w materii teologicznej. Przeciwstawia się systemowi teokracji. Cechy cezaropapizmu występowały w gallikanizmie, febroninizmie i józefizmie.</p>
+    <p class="history-description"><span>industrializacja </span> - proces przekształcania się społeczeństwa tradycyjnego w społeczeństwo przemysłowe dzięki wprowadzeniu gospodarki opartej na mechanizacji produkcji, kierowanej planowo przy użyciu określonych metod zarządzania, charakteryzujący się zwiększaniem odsetka osób zatrudnionych w przemyśle, standaryzacją czasu pracy, wyraźnym podziałem pracy i wzrostem heterogeniczności społeczeństwa. Procesowi temu towarzyszy przyspieszona urbanizacja, zwiększanie się liczby grup wtórnych w stosunku do grup pierwotnych, zmniejszanie się roli grup wspólnotowych.</p>
+
+
+
+  </div>
+    <h2 class="chemia-title" onclick="showChemia()">Definicje z kategori Chemia</h2>
+  <div class="word-box display-none" id="chemia-words">
+      <p class="chemia-description"><span>Kwas deoksyrybonukleinowy </span> - wielkocząsteczkowy organiczny związek chemiczny z grupy kwasów nukleinowych. U eukariontów zlokalizowany jest przede wszystkim w jądrach komórek, u prokariontów bezpośrednio w cytoplazmie, natomiast u wirusów w kapsydach. Pełni rolę nośnika informacji genetycznej organizmów żywych.</p>
+      <p class="chemia-description"><span>Fermentacja </span> - enzymatyczny proces przemian związków organicznych prowadzony przez mikroorganizmy, zachodzący w warunkach beztlenowych, którego efektem jest uzyskanie energii, najczęściej pod postacią ATP. Proces umożliwia uzyskanie energii użytecznej metabolicznie organizmom stale lub okresowo żyjącym w warunkach beztlenowych. </p>
+      <p class="chemia-description"><span>Enzymy </span> - wielkocząsteczkowe, w większości białkowe, katalizatory przyspieszające specyficzne reakcje chemiczne poprzez obniżenie ich energii aktywacji.</p>
+      <p class="chemia-description"><span>Skala Hounsfielda </span> - Skala jednostek Hounsfielda jest liniowym przekształceniem pierwotnego pomiaru liniowego współczynnika osłabienia, w której gęstość radiologiczna wody destylowanej w standardowej temperaturze i ciśnieniu (warunki standardowe) jest definiowana jako zero jednostek Hounsfielda (HU), natomiast gęstość powietrza w warunkach standardowych jest określana jako -1000 HU.  </p>
+      <p class="chemia-description"><span>Reaktor chemiczny </span> - to zbiornik lub urządzenie do prowadzenia reakcji chemicznych, w których mogą brać udział gazy, ciecze i ciała stałe. Reaktor chemiczny jest wykonany z tworzywa odpornego na korozję.
+Istnieje duża różnorodność rozwiązań konstrukcyjnych reaktorów chemicznych, co wynika przede wszystkim z wielkiej różnorodności procesów chemicznych. </p>
+      <p class="chemia-description"><span>Mikrosegregacja </span> - ograniczenie niejednorodności składu stopu do mikroobszarów. Powoduje pogorszenie się właściwości odlewu o jednorodnym składzie. Zwykle jest efektem tworzenia się dendrytów podczas krystalizacji. Mikrosegregacja prowadzi do topienia się obszarów międzydendrytycznych w znacznie niższych temperaturach od temperatury solidusu, powodując przy tym powstanie kruchości na gorąco. Zmniejszenie mikrosegregacji i kruchości na gorąco można uzyskać przez wyżarzanie ujednorodniające. Mikrosegregacja dotyczy różnic w składzie między częścią środkową i przypowierzchniową wlewka lub odlewu. </p>
+      <p class="chemia-description"><span>Sprężarka odśrodkowa </span> - charakteryzuje się przepływem promieniowym. Powietrze jest zasysane do środka obracającego się wirnika z umieszczonymi promieniowo łopatkami i jest odrzucane na zewnątrz wirnika na skutek działania siły odśrodkowej. Ruch powietrza w kierunku promieniowym skutkuje zarówno wzrostem ciśnienia jak i generowaniem energii kinetycznej. Zanim powietrze zostanie wprowadzone do środka następnego wirnika przechodzi przez dyfuzor i spiralę gdzie energia kinetyczna zamieniana jest na ciśnienie. </p>
+      <p class="chemia-description"><span>Operacja jednostkowa </span> - w inżynierii chemicznej jest to proces chemiczny lub fizyczny, który można opisać w granicach jednego modelu matematycznego. Przyjmuje się, że każdy ciąg operacji technologicznych da się sprowadzić do sumy określonych operacji jednostkowych. </p>
+      <p class="chemia-description"><span>Równowaga dynamiczna </span> - jest rodzajem stanu równowagi pomiędzy siłami, zjawiskami lub procesami (fizycznymi, chemicznymi, społecznymi, biologicznymi, doboru naturalnego itp.), w której:
+
+w stanie równowagi siły są sobie równe – ich wypadkowa równa jest zeru:
+satelita, księżyc lub planeta na orbicie (fizyka)
+w stanie równowagi szybkości procesów są sobie równe – ich wypadkowa równa jest zeru:
+np. równowaga chemiczna (chemia) </p>
+      <p class="chemia-description"><span>Flotacja </span>metoda rozdziału rozdrobnionych ciał stałych, wykorzystująca różnice w zwilżalności składników. Produktem flotacji jest tzw. koncentrat flotacyjny. </p>
+      <p class="chemia-description"><span>Spalanie bezpłomieniow(Tlenie) </span>szczególny przypadek reakcji spalania, której nie towarzyszy płomień. Według Polskiej Normy tląca się substancja nie emituje światła (nie żarzy się).
+Spalaniu bezpłomieniowemu ulegają substancje, które pod wpływem ogrzewania wytwarzają w warstwie sztywną, porowatą węglistą strukturę (np. substancje pochodzenia naturalnego). Natomiast, jeżeli substancja wykazuje jakąkolwiek tendencję to topnienia, mięknięcia, kurczenia się lub sublimacji wykazuje automatycznie brak skłonności do tlenia się. </p>
+  </div>
+  <div class="word-box display-none" id="sport-words">
+      <h2 class="sport-title" onclick="sportBiologia()">Definicje z kategori Historia</h2>
+      <p class="sport-description"><span>Wojciech fortuna </span> -  Polski skoczek narciarski, zawodnik Wisły-Gwardii Zakopane, mistrz olimpijski i automatycznie mistrz świata z Sapporo, trzykrotny medalista mistrzostw Polski (raz złoty i dwukrotnie brązowy). Czterokrotny uczestnik Turnieju Czterech Skoczni – najlepsze miejsce w jego klasyfikacji zajął podczas XXI edycji, kiedy to uplasował się na osiemnastym miejscu. W reprezentacji Polski występował w latach 1969–1979. Karierę sportową zakończył w 1979.</p>
+      <p class="sport-description"><span>Muhammad Ali </span> – amerykański bokser.
+
+Zdobył złoty medal podczas Letnich Igrzysk Olimpijskich w Rzymie (pokonał Polaka Zbigniewa Pietrzykowskiego), później osiągnął wielką sławę jako bokser zawodowy. Jako jedyny pięściarz w historii trzykrotnie zdobył tytuł mistrza świata wszechwag i skutecznie bronił go dziewiętnaście razy. Stoczył 61 walk, wygrał 56 pojedynków (z czego 37 przez nokaut). Poniósł tylko 5 porażek. Uważany za jednego z najlepszych pięściarzy, a także najważniejszych sportowców XX wieku.</p>
+      <p class="sport-description"><span>Michael Phelps </span> – amerykański pływak, 23-krotny mistrz olimpijski, 26-krotny mistrz świata, mistrz świata na krótkim basenie, wielokrotny rekordzista świata.
+
+Zdobywca ośmiu medali (6 złotych i 2 brązowych) na igrzyskach olimpijskich w Atenach w 2004 roku, 8 złotych medali podczas występów na igrzyskach olimpijskich w Pekinie (w tym 7 rekordów świata), 6 medali (4 złotych i 2 srebrnych) na igrzyskach olimpijskich w Londynie w 2012 roku oraz 6 medali (pięciu złotych i jednego srebrnego) na igrzyskach olimpijskich w Rio de Janeiro. Zdobywca 7 złotych medali na mistrzostwach świata w 2007 roku.</p>
+      <p class="sport-description"><span>Lewis Hamilton </span> – brytyjski kierowca wyścigowy, czterokrotny mistrz świata Formuły 1 w sezonach 2008, 2014, 2015 oraz 2017, wicemistrz świata Formuły 1 w roku 2007 oraz 2016.</p>
+      <p class="sport-description"><span>Floyd Mayweather Jr </span> – amerykański bokser, były mistrz świata federacji WBC, WBA i WBO w wadze półśredniej (do 147 funtów), WBC i WBA w wadze junior średniej (do 154 funtów) oraz były zawodowy mistrz świata organizacji WBC w kategoriach junior lekkiej (do 130 funtów), lekkiej (do 135 funtów), junior półśredniej (do 140 funtów) i lekkośredniej (do 154 funtów) oraz organizacji IBF w kategorii półśredniej. Jest brązowym medalistą olimpijskim z Atlanty.</p>
+      <p class="sport-description"><span>Michael Schumacher </span>– niemiecki kierowca wyścigowy, w latach 1991–2006 i 2010–2012 startujący w mistrzostwach świata Formuły 1. Schumacher jest siedmiokrotnym mistrzem świata kierowców Formuły 1 i jest powszechnie uważany za jednego z najlepszych kierowców Formuły 1 w historii. Schumacher jest posiadaczem większości rekordów Formuły 1, w tym: najwięcej tytułów mistrza świata, najwięcej zwycięstw, najszybszych okrążeń oraz wyścigów wygranych w jednym sezonie (13 w 2004). W 2002 roku Schumacher został jedynym kierowcą w historii Formuły 1, który ukończył wszystkie wyścigi sezonu na podium. Według oficjalnej strony Formuły 1 jest statystycznie najlepszym kierowcą w historii Formuły 1</p>
+      <p class="sport-description"><span>Wielobój kulturystyczny </span>dyscyplina sportowa wymyślona i uprawiana w Polsce w latach 60. XX w., oparta na kombinacji elementów kulturystyki (trening siłowy, pozowanie), gimnastyki i podnoszenia ciężarów (wyciskanie, przysiad, zarzut).</p>
+      <p class="sport-description"><span>Tchoukball </span> – bezkontaktowa zespołowa gra sportowa rozgrywana przez dwie drużyny z użyciem piłki (podobnej do piłki używanej w grze w piłkę ręczną) oraz dwóch specjalnych ram z naciągniętą siatką, które pełnią rolę bramek. Zasady gry w tchoukball wymyślił i opracował na początku lat 70. XX wieku szwajcarski biolog dr Hermann Brandt. Dr Hermann Brandt pragnął stworzyć grę będącą ogólnodostępną formą aktywności fizycznej, pozwalającą budować więzi społeczne, a przy tym wolną od licznych kontuzji, przejawów agresji i niesportowych zachowań, cechujących większość współczesnych dyscyplin zespołowych. Stworzył grę, w której bezpośredni kontakt pomiędzy zawodnikami jest zabroniony, ograniczając tym samym do minimum możliwość faulowania, a w konsekwencji wystąpienia kontuzji.</p>
+      <p class="sport-description"><span>Wyścigi psich zaprzęgów </span> – dyscyplina sportu, w której zawodnicy (maszerzy) są ciągnięci przez psi zaprzęg.
+
+Pierwsze wyścigi psich zaprzęgów były organizowane w początkach XX wieku w Ameryce Północnej. W II połowie XX wieku wyścigi zdobyły popularność w Europie – głównie w krajach skandynawskich i w krajach mających dostęp do terenów wysokogórskich, takich jak Alpy czy Pireneje.</p>
+      <p class="sport-description"><span>Los Angeles Clippers </span>– amerykański klub koszykarski, mający siedzibę w Los Angeles, w stanie Kalifornia. Występuje w Dywizji Pacyficznej, Konferencji Zachodniej w National Basketball Association (NBA).</p>
+      <p class="sport-description"><span>Zapasy wielbłądów </span> – tradycyjna impreza sportowa popularna głównie w Turcji i praktykowana w innych częściach Bliskiego Wschodu i Azji Południowej.
+
+Zapasy wielbłądów organizowane były przez starożytne plemiona tureckie już 2400 lat temu. Obecnie najbardziej popularne są na prowincji w zachodniej Turcji, gdzie została zorganizowana profesjonalna liga. Zwierzęta są wystawiane przez wsie, miasteczka i osoby prywatne. Wielbłądy przeznaczone do zapasów nie pracują i są specjalnie przygotowywane do zawodów. Imprezy wspiera rząd turecki uważając je za element dziedzictwa kulturowego kraju.</p>
+  </div>
+  <h2 class="biologia-title" onclick="showBiologia()">Definicje z kategori Biologia</h2>
+  <div class="word-box display-none" id="biologia-words">
+      <p class="biologia-description"><span>Aorta brzuszna </span> - nazwa nadana przez Arystotelesa, który twierdził, że funkcją aorty jest utrzymywanie serca we właściwym miejscu) - duży pień tętniczy, którego gałęzie doprowadzają krew tętniczą do wszystkich tkanek. Jest największą tętnicą człowieka.</p>
+      <p class="biologia-description"><span>Amoksycylina </span>– organiczny związek chemiczny, półsyntetyczny antybiotyk β-laktamowy o działaniu bakteriobójczym, należący do grupy aminopenicylin, wrażliwy na działanie β-laktamazy.</p>
+      <p class="biologia-description"><span>Wzrost drobnoustrojów </span> – proces namnażania się i wzrostu komórek drobnoustrojów – bakterii, grzybów lub pierwotniaków. Proces ten może zachodzić, jeśli żywa, zdolna do podziału komórka mikroorganizmu znajdzie się w sprzyjających dla siebie warunkach.</p>
+      <p class="biologia-description"><span>Biologiczne sprzężenie zwrotne </span>– oddziaływanie sygnałów stanu końcowego (wyjściowego) procesu, systemu lub układu, na jego sygnały referencyjne (wejściowe). Polega na otrzymywaniu przez układ informacji o własnym działaniu (o wartości wyjściowej). Ponieważ matematycznym, jednoznacznym opisem bloku gałęzi zwrotnej jest transmitancja, to informacja ta może być modyfikowana przez transmitancję bloku gałęzi zwrotnej.</p>
+      <p class="biologia-description"><span>Krzepnięcie krwi </span>– naturalny, fizjologiczny proces zapobiegający utracie krwi w wyniku uszkodzeń naczyń krwionośnych. Istotą krzepnięcia krwi jest przejście rozpuszczonego w osoczu fibrynogenu w sieć przestrzenną skrzepu (fibryny) pod wpływem trombiny. Krzepnięcie krwi jest jednym z mechanizmów obronnych organizmu w wypadku przerwania ciągłości tkanek.</p>
+      <p class="biologia-description"><span>Naczynie krwionośne </span>– część układu krążenia. Służą one do transportowania krwi przez organizm. Są trzy główne rodzaje naczyń krwionośnych: tętnice (odbierające krew z serca), naczynia włosowate (za pośrednictwem których następuje wymiana substancji między krwią a tkankami) i żyły (przenoszące krew z powrotem do serca).</p>
+      <p class="biologia-description"><span>Aberracja chromosomowa </span> zmiana struktury lub liczby chromosomów. Do aberracji chromosomowych może dochodzić spontanicznie lub pod wpływem czynników mutagennych (np. promieniowanie jonizujące, promieniowanie ultrafioletowe, wysokiej temperatury).</p>
+      <p class="biologia-description"><span>Allel dominujący </span> – allel ujawniający się w fenotypie organizmu diploidalnego zarówno w przypadku genotypu homozygotycznego (gdy obydwa chromosomy homologiczne zawierają dany allel) jak i w przypadku heterozygoty w której jeden z chromosomów zawiera dany allel (wówczas allel obecny na drugim chromosomie nazywany jest allelem recesywnym).</p>
+      <p class="biologia-description"><span>Aminokwasy endogenne </span>– aminokwasy, które organizm może syntetyzować samodzielnie, w przeciwieństwie do aminokwasów egzogennych, które musi przyjmować systematycznie wraz z pożywieniem.</p>
+      <p class="biologia-description"><span>Antygeny zgodności tkankowej </span> – zespół białek odpowiedzialnych za prezentację antygenów limfocytom T. Swoją nazwę zawdzięczają temu, że odkryto je jako pierwsze i najważniejsze białka decydujące o utrzymaniu się lub odrzuceniu przeszczepu, zatem odpowiadające za zgodność tkanek dawcy i biorcy.</p>
+      <p class="biologia-description"><span>Niedoczynność tarczycy </span> – choroba ludzi i zwierząt spowodowana niedoborem hormonów tarczycy, prowadzącym do spowolnienia procesów metabolicznych.</p>
+  </div>
+  <h2 class="informatyka-title" onclick="showInformatyka()">Definicje z kategori Informatyka</h2>
+  <div class="word-box display-none" id="informatyka-words">
+    <p class="informatyka-description"><span>Rejestr procesora </span> – komórki pamięci o niewielkich rozmiarach (najczęściej 4/8/16/32/64/128/256 bitów) umieszczone wewnątrz procesora i służące do przechowywania tymczasowych wyników obliczeń, adresów lokacji w pamięci operacyjnej itd. Większość procesorów przeprowadza działania wyłącznie korzystając z wewnętrznych rejestrów, kopiując do nich dane z pamięci i po zakończeniu obliczeń odsyłając wynik do pamięci.</p>
+    <p class="informatyka-description"><span>Tryb wsadowy </span>przetwarzanie wsadowe – wykonywanie serii zadań (programów) przez komputer. Zazwyczaj kolejne zadania są ze sobą powiązane: dane wyjściowe jednego programu przekazywane są kolejnemu programowi, któremu służą jako dane wejściowe itd.</p>
+    <p class="informatyka-description"><span>Interpolacja dwuliniowa </span>jest rozszerzeniem interpolacji liniowej. Metoda ta pozwala na interpolację funkcji dwóch zmiennych. Intuicyjnie interpolacja dwuliniowa jest złożeniem dwóch interpolacji liniowych. W celu przeprowadzenia interpolacji dwuliniowej przeprowadza się dwie interpolacje liniowe dla jednego kierunku (np. wzdłuż osi OX w układzie kartezjańskim), a następnie dla tak uzyskanych wartości przeprowadza się interpolację liniową dla drugiego kierunku (osi OY).</p>
+    <p class="informatyka-description"><span>Abstrakcja danych </span>w programowaniu nazywamy pewnego rodzaju uproszczenie rozpatrywanego problemu, polegające na ograniczeniu zakresu cech manipulowanych obiektów wyłącznie do cech kluczowych dla algorytmu, a jednocześnie niezależnych od implementacji. W tym sensie abstrakcja jest odmianą formalizmu matematycznego. Cel stosowania abstrakcji jest dwojaki: ułatwienie rozwiązania problemu i zwiększenie jego ogólności.
+
+Języki programowania (w szczególności języki obiektowe) mogą oferować specjalne narzędzia do tworzenia pewnych typów abstrakcji, jednak pojęcie to nie zależy w żaden sposób od konkretnego języka. Każde uogólnienie problemu mające na celu wyizolowanie jego kluczowych aspektów jest abstrakcją.</p>
+    <p class="informatyka-description"><span>Partycja </span> – logiczny, wydzielony obszar dysku twardego, który może być sformatowany przez system operacyjny w odpowiednim systemie plików. Niekiedy określenie partycja odnosi się do wydzielonego zasobu innego niż dysk twardy, np. partycja jako wydzielony logiczny komputer (PR/SM) lub partycjonowanie przełączników Fiber Channel lub ESCON Director.</p>
+    <p class="informatyka-description"><span>Bluetooth </span>– standard bezprzewodowej komunikacji krótkiego zasięgu pomiędzy różnymi urządzeniami elektronicznymi, takimi jak klawiatura, komputer, laptop, palmtop, telefon komórkowy i wieloma innymi.</p>
+    <p class="informatyka-description"><span>Baza danych </span> – zbiór danych zapisanych zgodnie z określonymi regułami. W węższym znaczeniu obejmuje dane cyfrowe gromadzone zgodnie z zasadami przyjętymi dla danego programu komputerowego specjalizowanego do gromadzenia i przetwarzania tych danych. Program taki (często pakiet programów) nazywany jest „systemem zarządzania bazą danych” (ang. database management system, DBMS).
+
+</p>
+    <p class="informatyka-description"><span>Metadane </span> – ustrukturalizowane informacje stosowane do opisu zasobów informacji lub obiektów informacji, dostarczające szczegółowych danych, dotyczących atrybutów zasobów lub obiektów informacji, w celu ułatwienia ich znalezienia, identyfikacji, a także zarządzania tymi zasobami.
+
+Metadane można podzielić według kategorii jako opisowe, strukturalne i administracyjne:
+
+Metadane administracyjne – dostarczają informacji dotyczących zarządzania zasobem informacji lub obiektem, takich jak: data i sposób jego utworzenia, typ dokumentu, informacje dotyczące dostępu do zasobu,
+Metadane opisowe – dostarczają informacji na temat takich danych jak tytuł, streszczenie, autor oraz słowa kluczowe, opisujące zasób informacji lub obiekt.</p>
+    <p class="informatyka-description"><span>Kryptologia </span> – dziedzina wiedzy o przekazywaniu informacji w sposób zabezpieczony przed niepowołanym dostępem. Współcześnie kryptologia jest uznawana za gałąź zarówno matematyki, jak i informatyki; ponadto jest blisko związana z teorią informacji, inżynierią oraz bezpieczeństwem komputerowym.</p>
+    <p class="informatyka-description"><span>Drukarka mozaikowa </span> – rodzaj drukarki komputerowej wykorzystującej głowicę drukującą, która porusza się w przód i w tył albo w górę i w dół względem strony i drukuje poprzez bezpośrednie oddziaływanie na stronę matrycą składającą się z określonej ilości igieł. Ponieważ do drukowania stosowana jest matryca punktowa, to przy jej pomocy można uzyskiwać praktycznie dowolny kształt drukowanych znaków, a nawet tworzyć rozbudowaną grafikę.</p>
+    <p class="informatyka-description"><span>Protokół transferu pliku </span>– protokół komunikacyjny typu klient-serwer wykorzystujący protokół sterowania transmisją (TCP) według modelu TCP/IP (krótko: połączenie TCP), umożliwiający dwukierunkowy transfer plików w układzie serwer FTP–klient FTP.FTP jest zdefiniowany przez IETF w dokumencie RFC 959 ↓.
+
+FTP jest protokołem 8-bitowym i dlatego nie wymaga kodowania danych do 7 bitów, tak jak w przypadku poczty elektronicznej.</p>
+  </div>
+  <h2 class="fizyka-title" onclick="showFizyka()">Definicje z kategori Fizyka</h2>
+  <div class="word-box display-none" id="fizyka-words">
+    <p class="fizyka-description"><span>Elektrodynamika klasyczna </span>– dział fizyki zajmujący się własnościami i oddziaływaniem obiektów naładowanych, z pominięciem efektów kwantowych. Elektrodynamika klasyczna opisuje aspekty klasyczne jednego z czterech podstawowych oddziaływań przyrody – oddziaływań elektromagnetycznych. Podstawowymi pojęciami elektrodynamiki klasycznej są pole elektryczne, pole magnetyczne, ładunek elektryczny, oraz prąd elektryczny.</p>
+    <p class="fizyka-description"><span>Stała Boltzmanna </span> – stała fizyczna pojawiająca się w równaniach określających rozkłady energii cząsteczek. Oznaczana jest symbolem k lub kB i związana jest równaniem: Kb = R/Na</p>
+    <p class="fizyka-description"><span>Transformacja Lorentza </span>– przekształcenie liniowe przestrzeni Minkowskiego umożliwiające obliczenie wielkości fizycznych w poruszającym się układzie odniesienia, jeśli wielkości te znane są w danym układzie.</p>
+    <p class="fizyka-description"><span>Mechanika Hamiltona </span>- przeformułowanie mechaniki klasycznej podane przez Williama Rowana Hamiltona w 1833. Formalizm Hamiltona wychodzi od mechaniki Lagrange'a, sformułowanej przez Josepha Louisa Lagrange w 1788 (która z kolei stanowi przeformułowanie mechaniki klasycznej w postaci podanej przez Newtona).</p>
+    <p class="fizyka-description"><span>Perpetuum mobile </span>– hipotetyczna maszyna, której zasada działania, wbrew paradygmatom fizyki klasycznej, umożliwiałaby jej pracę w nieskończoność.Udokumentowane próby zbudowania perpetuum mobile podejmowane były już w XIII wieku, a szczególne zainteresowanie tą koncepcją przypadło na wiek XVI i XVII.Prace podejmowane przed XIX wiekiem mogą być uznane za próby rozwoju koncepcji naukowych, które nie zostały potwierdzone.</p>
+    <p class="fizyka-description"><span>Zasady dynamiki Newtona </span>– trzy zasady leżące u podstaw mechaniki klasycznej sformułowane przez Isaaca Newtona i opublikowane w Philosophiae Naturalis Principia Mathematica w 1687 roku. Zasady dynamiki określają związki między ruchem ciała a siłami działającymi na nie, dlatego zwane są też prawami ruchu.
+W mechanice kwantowej przeważnie nie mają zastosowania, w mechanice relatywistycznej obowiązują w ograniczonym zakresie.</p>
+    <p class="fizyka-description"><span>Sito Eratostenesa </span>- przypisywany Eratostenesowi z Cyreny algorytm wyznaczania liczb pierwszych z zadanego przedziału[2,n].</p>
+    <p class="fizyka-description"><span>Widmo optyczne(spektrum) </span>– obraz uzyskany w wyniku rozłożenia światła niemonochromatycznego na składowe o różnych długościach fal (różnych barwach), np. za pomocą pryzmatu lub siatki dyfrakcyjnej.
+
+Widmo optyczne może być:
+
+emisyjne – powstałe w wyniku rozszczepienia światła emitowanego bezpośrednio ze źródła
+absorpcyjne – powstałe po rozszczepieniu światła, które przeszło przez ośrodek selektywnie absorbujący światło
+odbiciowe – powstałe w wyniku rozszczepienia światła, które wcześniej zostało selektywnie odbite</p>
+    <p class="fizyka-description"><span>Wahadło Foucaulta </span>– wahadło mające możliwość wahań w dowolnej płaszczyźnie pionowej. Powolna zmiana płaszczyzny ruchu wahadła względem Ziemi dowodzi jej obrotu wokół własnej osi. Nazwa wahadła upamiętnia jego wynalazcę, Jeana Bernarda Léona Foucaulta, który zademonstrował je w lutym 1851 roku w Paryskim Obserwatorium Astronomicznym. Kilka tygodni później eksperyment powtórzono w Panteonie w Paryżu.</p>
+    <p class="fizyka-description"><span>Ładunek elektryczny </span> – fundamentalna właściwość materii przejawiająca się w oddziaływaniu elektromagnetycznym ciał obdarzonych tym ładunkiem. Ciała obdarzone ładunkiem mają zdolność wytwarzania pola elektromagnetycznego oraz oddziaływania z tym polem. Oddziaływanie ładunku z polem elektromagnetycznym jest określone przez siłę Lorentza i jest jednym z oddziaływań podstawowych.</p>
+    <p class="fizyka-description"><span>Mechanika Kwantowa </span> – teoria praw ruchu obiektów poszerzająca zakres mechaniki na sytuacje, dla których przewidywania mechaniki klasycznej nie sprawdzały się. Opisuje przede wszystkim świat mikroskopowy – obiekty o bardzo małych masach i rozmiarach, np. atom, cząstki elementarne itp., ale także takie zjawiska makroskopowe jak nadprzewodnictwo i nadciekłość. Jej granicą dla średnich rozmiarów, energii czy pędów zwykle jest mechanika klasyczna.</p>
+  </div>
+  <div class="word-box" id="button-box">
+    <button onclick="goBackFromLearning()" class="btn btn-primary" id="single">Go Back</button>
+  </div>
+</section>
+<!-- Section Category -->
+    <section id="category" class="display-none">
+      <div class="container-flex">
+        <div class="category-container">
+          <h1>Kategorie</h1>
+          <div class="category-box ">
+            <button onclick="historiaFunction()" class="category-btn btn-danger">Historia</button>
+            <button onclick="chemiaFunction()" class="category-btn btn-info">Chemia</button>
+          </div>
+
+          <div class="category-box">
+            <button onclick="sportFunction()" class="category-btn btn-orange">Sport</button>
+            <button onclick="biologiaFunction()"class="category-btn btn-brown">Biologia</button>
+          </div>
+
+          <div class="category-box">
+            <button onclick="informatykaFunction()" class="category-btn btn-pink">Informatyka</button>
+            <button onclick="muzykaFunction()" class="category-btn btn-muzyka">Muzyka</button>
+          </div>
+
+          <div class="category-box">
+            <button onclick="fizykaFunction()" class="category-btn btn-success">Fizyka</button>
+            <button onclick="filmografiaFunction()" class="category-btn btn-warning">Kino</button>
+          </div>
+          <div class="category-box">
+            <button onclick="goBackFromCategory()" class="btn btn-primary" id="single">Go Back</button>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Section Multiplayer -->
+<section id="multiplayer" class="display-none">
+  <div class="container">
+      <h3 class="multi-heading">Wpisz hasło, które będzie próbował odgadnąć drugi gracz</h3>
+  </div>
+  <div class="multi-container">
+    <div class="form-group haslo">
+
+
+        <textarea name="Hasło" cols="50" rows="5" id="myTextarea" autofocus required maxlength="50" placeholder="Proszę nie wstawiać znaków specjalnych"></textarea>
+        <button onclick="multiplayerFunction()" class="btn btn-primary" id="username">Submit</button>
+        <button onclick="goBackFromMultiplayer()" class="btn btn-primary" id="back">Go Back</button>
+    </div>
+  </div>
+</section>
+<!-- Section Game -->
+
+  <section id="game-container" class="display-none">
+      <div id="plansza">
+
+      </div>
+      <div id="szubienica">
+        <img src="http://res.cloudinary.com/dinwmdlb9/image/upload/v1503591971/s0.jpg" alt="" />
+      </div>
+      <div id="alfabet">
+
+      </div>
+      <div style="clear:both;"></div>
+  </section>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,378 @@
+.display-none{
+  display: none !important;
+  transition: all 1s ease-in-out;
+}
+.display-show{
+  display: block !important;
+  transition: all 1s ease-in-out;
+}
+/* Cateogry Backgrounds */
+.historiaBackground{
+  background: url("https://static.pexels.com/photos/161798/stonehenge-architecture-history-monolith-161798.jpeg") no-repeat center;
+  background-size: cover;
+}
+.muzykaBackground{
+  background: url("https://static.pexels.com/photos/374703/pexels-photo-374703.jpeg") no-repeat center;
+  background-size: cover;
+}
+.sportBackground{
+  background: url("https://static.pexels.com/photos/163444/sport-treadmill-tor-route-163444.jpeg") no-repeat center;
+  background-size: cover;
+}
+.informatykaBackground{
+  background: url("https://static.pexels.com/photos/50711/board-electronics-computer-data-processing-50711.jpeg") no-repeat center;
+  background-size: cover;
+}
+.biologiaBackground{
+  background: url("https://static.pexels.com/photos/243931/pexels-photo-243931.jpeg") no-repeat center;
+  background-size: cover;
+}
+.chemiaBackground{
+  background: url("https://static.pexels.com/photos/248152/pexels-photo-248152.jpeg") no-repeat center;
+  background-size: cover;
+}
+.filmyBackground{
+  background: url("https://static.pexels.com/photos/33129/popcorn-movie-party-entertainment.jpg") no-repeat center;
+  background-size: cover;
+}
+.fizykaBackground{
+  background: url("https://previews.123rf.com/images/kstudija/kstudija1203/kstudija120300124/12931393-Physics-vector-background-with-gears-on-blackboard-Stock-Photo.jpg") no-repeat center;
+  background-size: cover;
+}
+.multiBackground{
+  background: url("https://dncache-mauganscorp.netdna-ssl.com/thumbseg/641/641171-bigthumbnail.jpg") no-repeat center;
+  background-size: cover;
+}
+/* Intro Section
+                         */
+
+
+#intro{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.intro-header{
+  text-align: center;
+  font-family: 'Kalam', cursive;
+  font-size: 2.5em;
+  margin-top: 40px;
+  color: rgba(77, 0, 51,0.9);
+  font-weight: 800;
+}
+#intro-single, #intro-multi{
+  border-radius: 5%;
+  border: 1px solid black;
+  font-size: 30px;
+font-size: 30px;
+font-family: Oswald, sans-serif;
+  padding: 15px;
+  margin: 20px;
+  color: white;
+  cursor: pointer;
+  min-height: 85px;
+  max-width: 215px;
+}
+#tutorial-btn{
+border-radius: 5%;
+border: 1px solid black;
+font-size: 30px;
+font-size: 30px;
+font-family: Oswald, sans-serif;
+padding: 15px;
+margin: 20px;
+color: white;
+cursor: pointer;
+min-height: 85px;
+max-width: 215px;
+background-color: rgba(0, 0, 128,0.7);
+}
+#intro-single{
+  background-color: rgba(50,250, 50, 0.8);
+}
+#intro-multi{
+  background-color: rgba(255, 0, 0, 0.8);
+}
+.container-flex{
+  margin-top: 50px;
+  display: inline-flex;
+  display: flex;
+  justify-content: center;
+
+}
+#btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#username{
+  cursor: pointer;
+  margin-top: 5px;
+  width: 50%;
+  margin: 10px auto;
+}
+.image{
+  margin-top: 60px;
+  max-width: 450px;
+}
+.image img{
+  width: 100%;
+}
+#nick{
+  width: 100%;
+  text-transform: uppercase;
+}
+/* Learning Section
+*/
+#learning{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition:all 1s ease;
+}
+#learning h2{
+  margin: 40px;
+  font-family: 'Kalam', cursive;
+}
+#learning h2:hover{
+  cursor: pointer;
+}
+#learning h1{
+  text-align: center;
+  margin-top: 50px;
+  font-family: Kalam, sans-serif;
+  font-weight: 800;
+}
+#learning p{
+  text-align: left;
+  line-height: 2em;
+}
+#learning .history-description span{
+  color: red;
+  font-weight: bold;
+}
+#learning .chemia-description span{
+  color: red;
+  font-weight: bold;
+}
+#learning .sport-description span{
+  color: red;
+  font-weight: bold;
+}
+#learning .biologia-description span{
+  color: red;
+  font-weight: bold;
+}
+#learning .informatyka-description span{
+  color: red;
+  font-weight: bold;
+}
+#learning .fizyka-description span{
+  color: red;
+  font-weight: bold;
+}
+#button-box{
+  width: 50%;
+}
+.word-box{
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+/* Multiplayer section
+*/
+#multiplayer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.haslo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  max-height: 500px;
+}
+#multiplayer h3{
+  text-align: center;
+  margin-top: 50px;
+  font-family: Kalam, sans-serif;
+  font-weight: 800;
+}
+#back{
+  width: 50%;
+  background-color: purple;
+  border: purple;
+}
+#back:hover{
+  background-color: mediumpurple;
+  cursor: pointer;
+}
+/* Category Section
+   */
+#single{
+  width: 50%;
+  background: linear-gradient(rgba(77, 38, 0, 0.7),rgba(153, 0, 61, 0.8));
+
+  border: purple;
+  height: 50px;
+}
+#single:hover{
+  cursor: pointer;
+  background: linear-gradient(rgba(153, 153, 0, 0.7),rgba(153, 0, 61, 0.8));
+  border: linear-gradient(rgba(153, 153, 0, 0.7),rgba(153, 0, 61, 0.8));
+}
+.category-btn
+{
+  border-radius: 5%;
+  border: 1px solid black;
+  font-size: 30px;
+font-size: 20px;
+  padding: 15px;
+  margin: 20px;
+  height: 65px;
+  width: 145px;
+}
+.category-container h1{
+  font-size: 3em;
+margin: 0.47em 0;
+text-align: center;
+font-family: Kalam, sans-serif;
+color: tan;
+font-weight: 800;
+}
+.category-box:nth-child(1){
+  margin-top: 3em;
+}
+.category-box{
+  padding: 1em;
+  text-align: center;
+}
+.btn-orange{
+    background: linear-gradient(rgba(102, 0, 102, 0.7),rgba(255, 255, 26, 0.8));
+}
+.btn-pink{
+  background: linear-gradient(rgba(102, 0, 102, 0.7),rgba(53, 12, 30, 0.4));
+}
+.btn-brown{
+  background: linear-gradient(rgba(255, 240, 0, 0.5),rgba(153, 51, 40, 0.7));
+}
+.btn-muzyka{
+  background: linear-gradient(rgba(55, 40, 0, 0.5),rgba(255, 0, 50, 0.5));
+}
+
+  /* Game Section
+
+
+  */
+
+#game-container{
+
+
+height: 100vh;
+background-color: white;
+color: black;
+display: flex;
+flex-direction: column;
+
+align-items: center;
+font-weight: 700;
+
+}
+#pojemnik
+{
+    max-height: 395px;
+	max-width:900px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#plansza
+{
+	max-width: 900px;
+
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 48px;
+	min-height: 60px;
+}
+
+#szubienica
+{
+	float: left;
+	max-width: 450px;
+	text-align: center;
+	min-height: 280px;
+	position: relative;
+}
+#szubienica img{
+ width: 100%;
+
+}
+
+#alfabet
+{
+	float: left;
+	max-width: 600px;
+	text-align: center;
+	max-height: 280px;
+  margin-top: 30px;
+}
+
+.litera
+{
+  width: 45px;
+      height: 45px;
+	text-align:center;
+	padding: 5px;
+	margin: 5px;
+	border: 3px solid black;
+	float: left;
+	cursor: pointer;
+  color: black;
+  font-size: 28px;
+	font-family: 'Katibeh', cursive;
+  line-height: 22px;
+	border-radius: 15px;
+}
+
+.litera:hover
+{
+	background-color: #222222;
+	color: white;
+	border: 3px solid white;
+}
+
+.reset
+{
+	color:rgb(51, 102, 0);
+	cursor: pointer;
+	font-size: 48px;
+}
+
+.reset:hover
+{
+	color:rgb(187, 255, 51);
+}
+@media (max-width:700px){
+  .container-flex{
+    flex-direction: column;
+  }
+}
+@media (max-width:600px){
+  .intro-header{
+    font-size: 2em;
+  }
+  #intro-single, #intro-multi{
+    font-size: 27px;
+  }
+}
+@media (max-width:460px){
+  .category-btn{
+    width: 130px;
+  }
+}
